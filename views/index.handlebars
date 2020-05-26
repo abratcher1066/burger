@@ -1,1 +1,31 @@
-init
+{{!-- * (done) Setup the `index.handlebars` to have the template that Handlebars can render onto.
+      * (done) Create a button in `index.handlebars` that will submit the user input into the database. --}}
+
+
+<h1>Burger Eater</h1>
+
+<p>Manage your burgers and devour new ones with this app. </p>
+
+{{!-- <ul>
+  {{#each quotes}}
+  	<li>
+  		<p><span class="label">ID:</span> {{this.id}}</p>
+      <p><span class="label">Quote:</span> {{this.quote}}</p>
+      <p><span class="label">Author:</span> {{this.author}}</p>
+
+      <button data-id="{{this.id}}" class="delquote">Delete</button>
+
+      <a href="/{{this.id}}">Update this quote</a>
+  	</li>
+  {{/each}}
+</ul> --}}
+
+<form method="POST" class="create-form" action="/">
+
+  <div class="form-group">
+    <label for="burger">Burger:</label>
+    <input type="text" id="burger" name="burger">
+  </div>
+
+  <button type="submit">Submit user input</button>
+</form>
